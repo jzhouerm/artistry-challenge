@@ -1,0 +1,22 @@
+<% if flash[:my_errors]%>
+<% flash[:my_errors].each do |e|%>
+<p><%= e %></p>
+<% end %>
+<% end %>
+
+<h1>Add New Artist</h1>
+
+<%= form_for @artist do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.submit %>
+
+<% end%>
+
